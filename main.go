@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"strconv"
@@ -149,5 +150,8 @@ func main() {
 	r.HandleFunc("/tasks/{id}", editTaskHandler).Methods("PUT")
 	r.HandleFunc("/tasks/{id}", deleteTaskHandler).Methods("DELETE")
 
-	log.Fatal(http.ListenAndServe(":8000", r))
+	// Print REDIS server start message to the terminal
+	fmt.Println("Starting Todo app server on port 8001")
+
+	log.Fatal(http.ListenAndServe(":8001", r))
 }
