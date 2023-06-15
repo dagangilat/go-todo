@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -27,8 +28,14 @@ var (
 // initDB initializes the database connection.
 func initDB() {
 	var err error
+	// Get the MYSQL_PASSWORD environment variable
+	password := os.Getenv("MYSQL_PASSWORD")
+	// The rest of the connection string
+	// username:password@tcp(localhost:3306)/database
+	connectionString := fmt.Sprintf("root:%s@tcp(localhost:3306)/your_todoapp", password)
+
 	// Establish a connection to the database.
-	db, err = sql.Open("mysql", "root:Plantago1$@tcp(127.0.0.1:3306)/todoapp")
+	db, err = sql.Open("mysql", connectionString)
 	if err != nil {
 		log.Fatal(err)
 	}
