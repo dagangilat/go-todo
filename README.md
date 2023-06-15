@@ -1,6 +1,12 @@
 # Todo App
 
 This is a simple Todo app server built with Go. It allows you to manage tasks by providing various API endpoints.
+Data is persisted in a MySQL database, which need to be installed and configured before running the application.
+
+## Requirements
+
+- Go 1.16+
+- MySQL 8+
 
 ## API Endpoints
 
