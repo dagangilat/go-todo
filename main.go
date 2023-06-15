@@ -32,7 +32,7 @@ func initDB() {
 	password := os.Getenv("MYSQL_PASSWORD")
 	// The rest of the connection string
 	// username:password@tcp(localhost:3306)/database
-	connectionString := fmt.Sprintf("root:%s@tcp(localhost:3306)/your_todoapp", password)
+	connectionString := fmt.Sprintf("root:%s@tcp(localhost:3306)/todoapp", password)
 
 	// Establish a connection to the database.
 	db, err = sql.Open("mysql", connectionString)
