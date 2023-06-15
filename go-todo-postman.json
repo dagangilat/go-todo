@@ -1,0 +1,128 @@
+{
+    "info": {
+        "_postman_id": "go-todo",
+        "name": "Todo App API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get all tasks",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "url": {
+                    "raw": "http://localhost:8000/tasks",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "tasks"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Add a new task",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"text\":\"Task 1\", \"completed\": false}"
+                },
+                "url": {
+                    "raw": "http://localhost:8000/tasks",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "tasks"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update an existing task",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"text\":\"Updated Task\", \"completed\": true}"
+                },
+                "url": {
+                    "raw": "http://localhost:8000/tasks/{id}",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "tasks",
+                        "{id}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete a task",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {},
+                "url": {
+                    "raw": "http://localhost:8000/tasks/{id}",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "tasks",
+                        "{id}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get a single task by ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "url": {
+                    "raw": "http://localhost:8000/tasks/{id}",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "tasks",
+                        "{id}"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
