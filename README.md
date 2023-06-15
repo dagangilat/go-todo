@@ -19,7 +19,7 @@ Data is persisted in a MySQL database, which need to be installed and configured
 ## Usage
 
 1. Make sure you have a MySQL database set up.
-2. Update the database connection credentials in the code.
+2. Database user is root, password is saved in an enviourment variable called MYSQL_PASSWORD, which need to be set before running the app.
 3. Build and run the Go application.
 
 ## Configuration
